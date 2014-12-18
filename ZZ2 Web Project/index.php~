@@ -1,0 +1,23 @@
+<html>
+  <head>
+  <title> ZAIDI Ayoub ZZ2
+  </title>
+  </head>
+  <body>
+  
+  <p>Bienvenu Dans Mon Chat</p>
+<?php
+$dirname = '.';
+$dir = opendir($dirname); 
+
+while($file = readdir($dir)) {
+	if($file != '.' && $file != '..' && !is_dir($dirname.$file))
+	{
+		echo '<a href="'.$file.'" >'.$file.'</a><br />';
+	}
+}
+
+closedir($dir);
+?>  
+  </body>
+</html>
